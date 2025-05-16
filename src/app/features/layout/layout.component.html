@@ -1,0 +1,14 @@
+<!-- <app-modal-change-password></app-modal-change-password> -->
+<app-dialog-change-password></app-dialog-change-password>
+<div class="layout-wrapper" [ngClass]="containerClass">
+    <app-top-bar></app-top-bar>
+    <div class="layout-sidebar">
+        <app-side-bar></app-side-bar>
+    </div>
+    <div class="layout-main-container" >
+        <div class="layout-main" style="width:99.8% !important">
+            <router-outlet />
+        </div>
+        <app-footer></app-footer>
+    </div>
+</div>

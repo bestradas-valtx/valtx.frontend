@@ -1,1 +1,345 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+$gutter: 1rem; //for primeflex grid system
+// @import "assets/layout/styles/layout/layout.scss";
+
+/* PrimeNG */
+@import "../node_modules/primeng/resources/primeng.min.css";
+@import "../node_modules/primeflex/primeflex.scss";
+@import "../node_modules/primeicons/primeicons.css";
+
+/* Code Highlight */
+@import "../node_modules/prismjs/themes/prism-coy.css";
+
+/* Demos */
+@import "assets/demo/styles/flags/flags.css";
+@import "assets/demo/styles/badges.scss";
+@import "variables.scss";
+
+:root {
+    --color-secundario: #ffc82f;
+    --color-primario: #156185;
+    --azul-suave: #156185;
+    --bg-row-total: #e9ecef;
+    --text-row-total: #156185;
+    --color-azul-tablas: #156185;
+}
+
+html {
+    font-size: 13px;
+}
+
+/*AUTOMCPLETABLE*/
+.p-autocomplete-loader {
+    right: 0.75rem !important;
+    overflow: hidden !important;
+    display: none !important;
+}
+
+/*BOTON DECARGAR MANUAL*/
+.btn-manual-usuario {
+    background: transparent;
+    border-color: transparent;
+    min-width: 98%;
+    font-weight: normal !important;
+    color: white;
+    cursor: pointer;
+    text-align: left;
+    padding: 0.5rem;
+}
+
+.btn-manual-usuario:hover {
+    min-width: 98%;
+    font-weight: normal !important;
+    color: white;
+    cursor: pointer;
+    text-align: left;
+    padding: 0.5rem;
+    border: 1px solid var(--color-primario) !important;
+    background: #495057;
+    color: #ffffff;
+    border-radius: 6px;
+    font-weight: 700;
+
+}
+
+.btn-manual-usuario:disabled {
+    min-width: 98%;
+    font-weight: normal !important;
+    color: white;
+    cursor: wait;
+    text-align: left;
+    padding: 0.5rem;
+    border: 1px solid var(--color-primario) !important;
+    background: #495057;
+    color: #ffffff;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+/*BOTON DECARGAR MANUAL*/
+
+
+/*FIELDSET*/
+
+.p-fieldset {
+    border: 1px solid var(--color-primario) !important;
+    //background: #ffffff;
+    color: #495057;
+    border-radius: 6px;
+}
+
+.p-fieldset .p-fieldset-legend {
+    padding: 1.25rem;
+    border: 1px solid var(--color-primario) !important;
+    color: #343a40;
+    justify-content: center;
+    align-items: center;
+    //background: #f8f9fa;
+    font-weight: 700;
+    border-radius: 6px;
+}
+
+/*FIN FIELD SET*/
+.fila-copia {
+    background-color: #dfdaf2 !important;
+}
+
+.row-total {
+    color: var(--text-row-total) !important;
+    background: var(--bg-row-total) !important;
+    font-weight: 600;
+}
+
+.p-inputnumber-input {
+    flex: 1 1 auto;
+    width: 100% !important;
+    text-align: right;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    /* Firefox */
+}
+
+
+.table-xl table * {
+    font-size: 12px !important;
+}
+
+
+.content-table-xl .p-datatable-wrapper,
+.table-pb-25 .p-datatable-wrapper {
+    padding-bottom: 250px;
+}
+
+.table-pb-30 .p-datatable-wrapper {
+    padding-bottom: 330px;
+}
+
+.content-table-xl .p-inputtext,
+.table-xl .p-inputtext {
+    padding: 0.6rem 0.5rem !important;
+}
+
+.content-table-xl .p-dropdown .p-dropdown-label {
+    padding: 0.5rem 0.5rem !important;
+}
+
+form label {
+    margin-bottom: 5px;
+    display: block;
+}
+
+
+.form-control {
+    width: 100%;
+}
+
+.form-control-numerico {
+    width: 100% !important;
+}
+
+.form-control-autocomplete {
+    width: 100%;
+}
+
+
+
+/*CONTROLA LOS COLORES DEL DIALOG*/
+.p-dialog .p-dialog-header {
+    background: $color-primario;
+    color: white;
+}
+
+.p-dialog .p-dialog-header .p-dialog-header-icon {
+    width: 2rem;
+    height: 2rem;
+    //color: black !important;
+    border: 0 none;
+    background: transparent;
+    border-radius: 50%;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    margin-right: 0.5rem;
+}
+
+.p-dialog .p-dialog-footer {
+    border-top: 0 none;
+    //background: #ffffff;
+    // color: #495057;
+    padding: 0 1rem 0.7rem 1rem !important;
+    text-align: right;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+
+/*FIN DIALOG*/
+
+.layout-topbar-logo {
+    cursor: pointer;
+}
+
+
+.p-autocomplete .p-autocomplete-multiple-container .p-autocomplete-input-token {
+    padding: 0 !important;
+}
+
+.p-multiselect .p-multiselect-label {
+    padding: 0.5rem 0.5rem;
+}
+
+.p-inputtext {
+    font-size: 0.9rem;
+    outline: none;
+}
+
+
+.p-paginator .p-dropdown {
+    height: auto !important;
+    align-items: center;
+}
+
+
+.img-dashboard {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+
+.layout-wrapper.layout-static.layout-static-inactive .layout-main-container {
+    padding-left: 1rem;
+}
+
+.p-datatable .p-datatable-thead>tr>th {
+    padding: 0.5rem 0.5rem;
+}
+
+.p-datatable.p-datatable-sm .p-datatable-thead>tr>th {
+    padding: 0.2rem 0.2rem;
+}
+
+.p-datatable-wrapper {
+    background: #ffffff;
+}
+
+
+
+.last-border-none .p-datatable .p-datatable-tbody>tr:last-child>td {
+    border-bottom: none !important;
+}
+
+
+.p-button.p-button-xs {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.85rem;
+}
+
+.bgrow-total {
+    background: var(--bg-row-total) !important;
+}
+
+.cel-total {
+    background: var(--bg-row-total) !important;
+    color: var(--text-row-total) !important;
+}
+
+form .p-button.p-button-icon-only.p-button-rounded {
+    width: 3rem !important;
+}
+
+
+
+
+/* TABLAS CABECERA AZUL */
+.p-datatable .p-datatable-thead>tr>th {
+    color: #ffffff !important;
+    background: #156185 !important;
+}
+
+
+
+
+
+.cel-icon {
+    max-width: 4rem !important;
+    min-width: 4rem !important;
+    z-index: 100;
+}
+
+/* JUSTIFY FLEX*/
+.justify-center {
+    justify-content: center !important;
+}
+
+.justify-end {
+    justify-content: end !important;
+}
+
+
+
+
+/*DIVIDER*/
+.p-divider.p-divider-horizontal:before {
+    border-top: 1px var(--color-primario);
+}
+
+.p-divider.p-divider-horizontal {
+    margin: 0.5rem 0rem !important;
+    padding: 0 1.25rem;
+}
+
+/**/
+
+
+.fade-in {
+    transition: all 0.3s ease-in-out;
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

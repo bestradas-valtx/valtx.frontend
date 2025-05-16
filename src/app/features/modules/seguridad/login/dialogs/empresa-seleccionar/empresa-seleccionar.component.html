@@ -1,0 +1,18 @@
+<div class="dialog-content">
+    <h2>Seleccione la Empresa</h2>
+    <p>Por favor, seleccione la empresa con la que desea operar.</p>
+
+    <p-dropdown
+        [options]="empresas"
+        [(ngModel)]="empresaSeleccionada" 
+        placeholder="Seleccione una empresa"
+        optionLabel="name"
+        [showClear]="true"
+        styleClass="dropdown-full">
+    </p-dropdown>
+
+    <div class="dialog-buttons">
+        <button pButton type="button" label="Cancelar" class="p-button-outlined" (click)="cancelar()"></button>
+        <button pButton type="button" label="Confirmar" (click)="seleccionarEmpresa()" [disabled]="!empresaSeleccionada"></button>
+    </div>
+</div>

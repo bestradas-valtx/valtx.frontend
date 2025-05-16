@@ -1,0 +1,57 @@
+<div class="login-container">
+    <div class="wrap-login">
+        <div class="login-form">
+            <div class="box-login p-6">
+                <h1 class="mb-5 font-bold">Iniciar sesión</h1>
+                <div class="w-full mx-auto">
+                    <label for="email1" class="block text-xl font-medium mb-2 font-bold">Usuario</label>
+                    <span class="p-input-icon-left w-full">
+                        <i class="pi pi-user"></i>
+                        <input
+                            type="text"
+                            class="w-full"
+                            pInputText
+                            placeholder="Ingresa tu usuario"
+                            [(ngModel)]="req.vusername" autocomplete="off"
+                        />
+                    </span>
+
+                    <label for="vpassword" class="block text-xl font-medium mt-3 mb-2 font-bold">Contraseña</label>
+                    <p-password
+                        [toggleMask]="true"
+                        [feedback]="false"
+                        [(ngModel)]="req.vpassword"
+                        inputStyleClass="w-full"
+                        styleClass="w-full flex justify-end relative"
+                        (keyup.enter)="login()"
+                    >
+                    </p-password>
+
+                    <button
+                        pButton 
+                        Ripple
+                        label="Iniciar sesión"
+                        icon="pi pi-sign-in"
+                        [loading]="isLoading"
+                        (click)="login()" 
+                        type="button"
+                        class="btn-sesion w-full mt-5 px-5 text-xl p-button-lg"
+                    >
+                    </button>
+
+                    <div class="box-link-forgot text-center my-4">
+                        <a
+                            class="link-forgot font-bold no-underline cursor-pointer" href="/#/recuperar-clave"
+                        >
+                            ¿Tienes problemas para iniciar sesión?
+                        </a>
+                    </div>
+                    <p-toast key="tst" [baseZIndex]="99999"></p-toast>
+                </div>
+            </div>
+        </div>
+
+        <div class="login-image-hero" style="background-image: url('assets/layout/images/fondo-login-tgestiona.webp');">
+        </div>
+    </div>
+</div>
